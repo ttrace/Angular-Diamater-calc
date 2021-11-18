@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from math import *
 r = 3478.8
 a = 384400
@@ -5,10 +6,9 @@ delta_rad = atan(r/a)
 unit= "km"
 type = 1
 
-# is radian
 print("Angular diameter of Moon")
 
-# function from https://stackoverflow.com/questions/2579535/convert-dd-decimal-degrees-to-dms-degrees-minutes-seconds-in-python
+# decdeg2dms(dd) from https://stackoverflow.com/questions/2579535/convert-dd-decimal-degrees-to-dms-degrees-minutes-seconds-in-python
 def decdeg2dms(dd):
    is_positive = dd >= 0
    dd = abs(dd)
@@ -44,7 +44,7 @@ def print_params():
 print_params()
 
 while type != "0":
-   print("[0]uit [1]Size [2]Distance\n[3]Diameter keep target size\n[4]Diameter keep distance\n[5]:Unit")
+   print("[0]uit [1]Size [2]Distance\n[3]Diameter keep target size\n[4]Diameter keep distance\n[5]Unit")
    type=input("Enter Number [0]-[5] > ")
    if type == "1":
       rI=input("Enter radius of target >> ")
