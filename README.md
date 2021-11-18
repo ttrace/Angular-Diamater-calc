@@ -2,6 +2,8 @@
 
 Angular Diameter Calc shares a small python program HOWLARG.py, which calculates how we see distanced objects by angular diameter. It calculates actual size or distance by setting angular diameter.
 
+![Screen](screen.png)
+
 ## Prompt
 
 HOWLARGE.py shows the Angular Diameter of the Moon looking from the Earth on startup prompt.
