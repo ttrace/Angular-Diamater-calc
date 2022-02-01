@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from math import *
-diamatter = 12000
+diamatter = 3478.8
 a = 384400
 r = diamatter/2
 delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
