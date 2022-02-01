@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from math import *
-r = 3478.8
+diamatter = 12000
 a = 384400
-delta_rad = atan(r/a)
+r = diamatter/2
+delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
 unit= "km"
 type = 1
 
@@ -37,7 +38,7 @@ def dms2decdeg(dms):
 def print_params():
    delta_deg = delta_rad * 180 / pi
    delta_degTaple = decdeg2dms(delta_deg)
-   print("Size:r={0:,.2f}{1}".format(r,unit))
+   print("Size:r={0:,.2f}{1}".format(r * 2,unit))
    print("Distance:a={0:,.2f}{1}".format(a,unit))
    print("Angular diameter:{0:.0f}°{1:.0f}'{2:.2f}''".format(delta_degTaple[0],delta_degTaple[1],delta_degTaple[2]))
 
@@ -49,22 +50,22 @@ while type != "0":
    if type == "1":
       rI=input("Enter radius of target >> ")
       r=float(rI)
-      delta_rad = atan(r/a)
+      delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
       print_params()
    elif type == "2":
       aI=input("Enter Distance to target >> ")
       a=float(aI)
-      delta_rad = atan(r/a)
+      delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
       print_params()
    elif type == "3":
       dI=input("Enter Delta in D,M,S >> ").split(',')
       delta_rad = dms2decdeg(dI) / 180 * pi
-      a  = r / tan(delta_rad)
+      a  = sqrt((r/tan(delta_rad)/2)**2+(r**2))
       print_params()
    elif type == "4":
       dI=input("Enter Delta in D,M,S >> ").split(',')
       delta_rad = dms2decdeg(dI) / 180 * pi
-      r = a *  tan(delta_rad)
+      r = (a*tan(delta_rad/2))/sqrt(tan(delta_rad/2)**2 + 1)
       print_params()
    elif type == "5":
       unit = input("Enter Unit >> ")
