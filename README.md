@@ -10,12 +10,13 @@ HOWLARGE.py shows the Angular Diameter of the Moon looking from the Earth on sta
 
 ```
 Angular diameter of Moon
-Size:r=3,478.80km
+Size:3,478.80km(r=1,739.40km)
 Distance:a=384,400.00km
 Angular diameter:0°31'6.63''
+1 pinkey width or narrower
 ```
 
-Below this prompt, HOWLARGE.py asks you which parameter you want to set for caluclating angular-diameter, size or distance.
+Below this prompt, HOWLARGE.py asks you which parameter you want to set for calculating angular-diameter, size or distance.
 
 ```
 [0]uit [1]Size [2]Distance
@@ -32,14 +33,15 @@ If you want to calculate the angular diameter of the Earth from moon, you only s
 Enter Number [0]-[5] > 1
 Enter radius of target >> 12742
 
-Size:r=12,742.00km
+Size:12,742.00km(r=6,371.00km)
 Distance:a=384,400.00km
-Angular diameter:1°53'54.71''
+Angular diameter:1°53'57.53''
+pinkey - thumb witdh
 ```
 
 Angular diamater 1°53' is same with the width of your thumb on streaching arms.  You can describe as following.
 
-> The Earth look bigger than I expected.  It was same size of my thumb.
+> The Earth looks bigger than I expected.  It was the same size of my thumb.
 
 ## Calculating distance toward Boeing 777 from Angular Diameter
 
@@ -50,9 +52,10 @@ Set the unit to m(meter).
 Enter Number [0]-[5] > 5
 Enter Unit >> m
 
-Size:r=139,910.16m
+Size:12,742.00m(r=6,371.00m)
 Distance:a=384,400.00m
-Angular diameter:20°0'0.00''
+Angular diameter:1°53'57.53''
+pinkey - thumb witdh
 ```
 
 Set the target size to 63: Length of Boeing 777.
@@ -60,9 +63,10 @@ Set the target size to 63: Length of Boeing 777.
 Enter Number [0]-[5] > 1
 Enter radius of target >> 63
 
-Size:r=63.00m
+Size:63.00m(r=31.50m)
 Distance:a=384,400.00m
 Angular diameter:0°0'33.81''
+1 pinkey width or narrower
 ```
 
 Set the [3]Distance keep target size, with comma separated degrees.  20,0,0 means 20°0'0.00’’.  This angular diameter means the object looks same with your span from the top of thumb to pinkie of your hand on outstretched arm.
@@ -71,12 +75,13 @@ Set the [3]Distance keep target size, with comma separated degrees.  20,0,0 mean
 Enter Number [0]-[5] > 3
 Enter Delta in D,M,S >> 20,0,0
 
-Size:r=63.00m
-Distance:a=173.09m
+Size:63.00m(r=31.50m)
+Distance:a=181.40m
 Angular diameter:20°0'0.00''
+index-pin ~ thumb-pin span
 ```
 
-You get the 173m and can describe it.
+You get the 181m and can describe it.
 
-> Boeing looked same as the palm span.  Could I sneak stealthily to reach there?  Is could be 150m, or longer?
+> Boeing flew over me looked as the palm span.  Could I sneak stealthily to reach there?  Is could be 150m, or longer?
 

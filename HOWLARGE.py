@@ -6,6 +6,8 @@ r = diamatter/2
 delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
 unit= "km"
 type = 1
+delta_deg = 0
+hand_size = ''
 
 print("Angular diameter of Moon")
 
@@ -35,12 +37,31 @@ def dms2decdeg(dms):
    else:
       return decdeg * -1
 
+def hand_sizes( deg ):
+   if deg <= 1.0:
+      return "1 pinkey width or narrower"
+   elif deg <= 2.0:
+      return "pinkey - thumb witdh"
+   elif deg <= 5.0:
+      return "thumb - 3 fingers width"
+   elif deg <= 10.0:
+      return "3 fingers - fist width"
+   elif deg <= 15.0:
+      return "fist - index-pin span"
+   elif deg <= 20.0:
+      return "index-pin ~ thumb-pin span"
+   else:
+      num_of_span = deg / 20
+      return "{0:.1f} thumb-pin spans".format(num_of_span)
+
 def print_params():
    delta_deg = delta_rad * 180 / pi
    delta_degTaple = decdeg2dms(delta_deg)
-   print("Size:r={0:,.2f}{1}".format(r,unit))
+   diamatter = r * 2
+   print("Size:{2:,.2f}{1}(r={0:,.2f}{1})".format(r,unit,diamatter))
    print("Distance:a={0:,.2f}{1}".format(a,unit))
    print("Angular diameter:{0:.0f}°{1:.0f}'{2:.2f}''".format(delta_degTaple[0],delta_degTaple[1],delta_degTaple[2]))
+   print( hand_sizes(delta_deg) )
 
 print_params()
 
@@ -48,8 +69,8 @@ while type != "0":
    print("[0]uit [1]Size [2]Distance\n[3]Diameter keep target size\n[4]Diameter keep distance\n[5]Unit")
    type=input("Enter Number [0]-[5] > ")
    if type == "1":
-      rI=input("Enter radius of target >> ")
-      r=float(rI)
+      rI=input("Enter size-diamatter of the target >> ")
+      r= float(rI) / 2
       delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
       print_params()
    elif type == "2":
