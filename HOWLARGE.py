@@ -66,7 +66,7 @@ def print_params():
 print_params()
 
 while type != "0":
-   print("[0]uit [1]Size [2]Distance\n[3]Diameter keep target size\n[4]Diameter keep distance\n[5]Unit")
+   print("[0]Quit [1]Size [2]Distance\n[3]Diameter; keep target size\n[4]Diameter; keep distance\n[5]Unit")
    type=input("Enter Number [0]-[5] > ")
    if type == "1":
       rI=input("Enter size-diamatter of the target >> ")

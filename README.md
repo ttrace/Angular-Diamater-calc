@@ -19,9 +19,9 @@ Angular diameter:0°31'6.63''
 Below this prompt, HOWLARGE.py asks you which parameter you want to set for calculating angular-diameter, size or distance.
 
 ```
-[0]uit [1]Size [2]Distance
-[3]Diameter keep target size
-[4]Diameter keep distance
+[0]Quit [1]Size [2]Distance
+[3]Diameter; keep target size
+[4]Diameter; keep distance
 [5]Unit
 ```
 
