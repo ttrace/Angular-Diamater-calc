@@ -71,8 +71,12 @@ while type != "0":
    if type == "1":
       rI=input("Enter size-diamatter of the target >> ")
       r= float(rI) / 2
-      delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
-      print_params()
+      if r >= a:
+         print("Size must be smaller than Distance")
+         r = a / 2
+      else:
+         delta_rad = 2*atan(r/(a*sqrt(1-(r/a)**2)))
+         print_params()
    elif type == "2":
       aI=input("Enter Distance to target >> ")
       a=float(aI)
